@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ECECEC; 
+    color: #1C252C;
+    
+}
+
+.Grid {
+    
+    overflow: hidden;
+ display: grid;
+ grid-template-rows: auto auto auto;
+ grid-template-columns: 100%;
+}
+
+
+
+.Header {
+    background-color: #D9D9D9;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+.HeaderItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-weight: 300;
+    color: #58545B;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Content {
+    
+    background-color: #ECECEC; 
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+}
+[class*="Content"] { 
+    
+}
+
+.ContentT {
+    margin: 10px;
+}
+
+.ContentName {
+    opacity: 0;
+    flex-direction: column;
+   display: flex;
+   align-items: center;
+margin-top: 50px;
+}
+
+.ContentName.element-show {
+    opacity: 1;
+    transition: 1s;
+}
+
+.ContentFrontName {
+    font-size: 32px;
+}
+
+.ContentSubName {
+    font-size: 16px;
+}
+
+.ContentBackground img {
+    width: 200px;
+    margin: 50px;
+}
+
+.ContentText {
+    width: 300px;
+font-weight: 800;
+flex-shrink: 0;
+font-size: 16px;
+
+}
+
+.ContentTextSub {
+    font-weight: 400;
+}
+
+.ContentAboutContainer {
+    opacity: 0;
+    display: grid; 
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    width: 90%;
+   justify-content: center;
+}
+
+.ContentAboutContainer.element-show {
+    opacity: 1;
+    transition: 1s;
+}
+
+
+
+.ContentMyWorks {
+    opacity: 0;
+    border-radius: 30px;
+    width: auto;
+    background-color: #D9D9D9;
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.ContentMyWorks.element-show {
+    opacity: 1;
+    transition: 1s;
+}
+
+.NewContentMyWorks {
+    width: 750px;
+    height: 300px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.NewContentHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 250px;
+    height: 100px;
+   font-size: 50px;
+    margin-top: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    /* top: 10%; Перемещаем блок вниз на половину его высоты */
+    /* left: 50%; Перемещаем блок вправо на половину его ширины */
+    /* transform: translate(-50%, -50%); Центрируем блок относительно его собственных размеров */
+    
+   
+}
+
+.NewContentContainer {
+    
+    border-radius: 30px;
+    width: 100%;
+    height: 300px;
+    background-color: #D9D9D9;
+    position: absolute;
+    margin-top: 50px;
+}
+
+
+
+.ContentContainer {
+    width: 60%; 
+    display: grid; 
+    justify-content: center; 
+    flex-direction: column; 
+    align-items: center;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto;
+    transition: 1s;
+    opacity: 0;
+}
+
+.ContentContainer.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+.Work {
+    margin: 15px;
+    
+}
+
+
+
+.MyWork {
+   
+    grid-column: 1 / span 2;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    
+    width: auto;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    background-color: #000000;
+  
+    grid-row: 1;
+}
+
+.MyWork img {
+    position: absolute;
+    width: 110%;
+    filter: blur(1px);
+    opacity: 0.5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.MyWork img:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.NameWork {
+    color: white;
+    position: absolute;
+    font-size: 2vw;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.MyWork img.hovered {
+    /* Дополнительные стили для MyWork img при наведении на NameWork */
+    opacity: 0.3;
+  }
+  
+
+.NameWorkInProcess1 {
+    font-size: 2vw;
+    z-index: 1;
+    color: #ffffff;
+   
+}
+
+.TextWorkInProcess1 {
+    color: #acacac;
+}
+.MyWorkInProcess1 {
+    background-color: #D9D9D9;
+    grid-row: 2;
+   grid-column: 1 ;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    
+  
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    /* background-color: #D9D9D9; */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 1); */
+
+}
+
+.MyWorkInProcess1 img {
+    position: absolute;
+    width: 110%;
+    filter: blur(1px);
+    opacity: 0.5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.NameWorkInProcess2 {
+    font-size: 2vw;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.TextWorkInProcess2 {
+    color: #acacac;
+}
+.MyWorkInProcess2 {
+   
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    background-color: #D9D9D9;
+    
+}
+
+
+
+.BorderLine {
+  width: 15px;
+    
+}
+
+@media screen and (max-width: 1000px) {
+
+    .NameWork {
+       
+        font-size: 6vw;
+       
+    }
+
+    .NameWorkInProcess1 {
+        font-size: 6vw;
+    }
+    .NameWorkInProcess2 {
+        font-size: 6vw;
+    }
+
+    .MyWorkInProcess2 {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+
+    .ContentContainer {
+        width: 100%; 
+}
+
+.FootherContentContainer {
+    flex-direction: column;
+}
+
+.SkillSteck {
+   
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.BorderLine {
+   
+    height: 15px;
+    width: 0px;
+}
+
+.SteckElem {
+width: 100%;
+}
+
+.ContentMyWorks {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #D9D9D9;
+    height: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 0px;
+
+}
+
+.Header {
+    justify-content:center;
+}
+
+
+
+.ContentBackground {
+   grid-column: 1;
+   grid-row: 1;
+}
+
+.ContentText {
+    grid-row: 2;
+}
+
+.MyWorkInProcess1 {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+}
+
+}
+
+
+
+.MyWorkInProcess2 img {
+    position: absolute;
+    width: 110%;
+    filter: blur(1px);
+    opacity: 0.5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.WorksHeader {
+    font-size: 32px;
+    margin-top: 50px;
+    color: #acacac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    opacity: 0;
+}
+
+.WorksHeader.element-show {
+    opacity: 1;
+    transition: 1s;
+}
+
+
+.SkillSteck {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    
+}
+
+/* .SteckElemMargin {
+    width: 15px;
+} */
+
+.SteckElem {
+    
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+   margin: 10px;
+    background-color:rgb(239, 239, 239);
+}
+
+.AvatarContainer {
+    
+    border-radius: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background-color: #D9D9D9;
+    margin-top: 50px;
+}
+
+
+.Avatar img {
+    border-radius: 240px;
+    width: 180px;
+    height: 180px;
+}
+
+.Foother {
+    opacity: 0;
+    background-color: #D9D9D9;
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Foother.element-show {
+    opacity: 1;
+    transition: 1s;
+}
+
+.FootherHeader {
+    font-size: 32px;
+   margin-left:0;
+    margin-top: 50px;
+}
+
+.FootherContent {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+   
+}
+
+.FootherText {
+  
+    margin: 20px;
+    font-weight: 400;
+}
+
+.FootherText a {
+    color: #58545B;
+    text-decoration: none;
+}
+
+.FootherTextPrev {
+    font-weight: 800;
+}
+
+.FootherContentContainer {
+    display: flex;
+    margin-top: 50px;
+    font-size: 22px;
+    margin-left: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: baseline;
+  
+   
+}
+
+.Copr {
+    width:100%; 
+    height: 50px; 
+    background-color: #c9c9c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksym Herashchenko, CV/Portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="IMG/Avatar.jpg" type="image/png">
+</head>
+
+<body>
+    <div class="Grid">
+        <div class="Header">
+            <div class="HeaderItem AboutMe">About me</div>
+            <div class="HeaderItem MyWorks" onclick="scrollToSectionMyWorks()">My Works</div>
+            <div class="HeaderItem" onclick="scrollToSectionContacts()">Contacts</div>
+            <div style="width: 20px;"></div>
+        </div>
+        <div class="Content">
+            <div class="ContentName">
+                <div class="ContentFrontName">Front-end developer</div>
+                <div class="ContentSubName">Maksym Herashchenko, CV/Portfolio</div>
+                <div class="AvatarContainer">
+                    <div class="Avatar"><img src="IMG/Avatar.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="ContentAvatar"></div>
+            <div class="ContentAboutContainer">
+                <div class="ContentBackground"><img src="IMG/Webp_2.webp" alt=""></div>
+                <div class="ContentText">Вітаю, мене звати Макс! <div class="ContentTextSub"> Я джуніор Front-end
+                        розробник, тут ви зможете дізнатися трохи інформації про мене та побачити приклади моїх робіт 🤓
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ContentAboutContainer">
+
+                <div class="ContentText">Для роботи я використовую:<div class="ContentTextSub"> Visual Studio Code,
+                        Figma, Photoshop. Легко освоюю нові програми у разі потреби.</div>
+                </div>
+                <div class="ContentBackground"><img src="IMG/Webp_3.webp" alt=""></div>
+            </div>
+
+            <div class="ContentMyWorks">
+                
+                <div class="SkillSteck">
+                    <div class="BorderLine"></div>
+                    <div class="SteckElem">HTML</div>
+                    <div class="SteckElem">CSS</div>
+                    <div class="SteckElem">JS</div>
+                    <div class="SteckElem">GIT</div>
+                    <div class="SteckElem">SASS</div>
+                    <div class="SteckElem">REACT</div>
+                    <div class="BorderLine"></div>
+                </div>
+               
+            </div>
+            <div class="WorksHeader" id="MyWorks"><div>MY WORKS</div></div>
+            <div class="ContentContainer" >
+               
+
+                <div class="Work MyWork">
+                    <div class="NameWork">ПРОКАТ ДЕТСКИХ ТОВАРОВ</div>
+                    <div class="TextWork"><img src="IMG/прокат.jpg" alt=""></div>
+                </div>
+                <div class="Work MyWorkInProcess1">
+                    <div class="NameWorkInProcess1">СТО</div>
+                    <div class="TextWorkInProcess1">В розробці</div>
+                </div>
+                <!-- <div class="StickerWork"><img src="IMG/Sticker4.webp" alt=""></div> -->
+                <div class="Work MyWorkInProcess2">
+                    <div class="NameWorkInProcess2">РЕСТОРАН</div>
+                    <div class="TextWorkInProcess2">В розробці</div>
+                </div>
+                
+                
+               
+            </div>
+            <div style=" margin-top: 50px;"></div>
+        </div>
+        <div class="Foother">
+            <div class="FootherHeader"  id="Contacts">Contacts</div>
+            <div class="FootherContent">
+                <div class="FootherContentContainer">
+                    <div class="FootherText"><div class="FootherTextPrev">Phone:</div> <a href="tel:+380665698299"> +38 (066) 56 98 299</a></div>
+                    <div class="FootherText"><div class="FootherTextPrev">Email:</div> <a href="mailto:etozhemaxim@gmail.com">etozhemaxim@gmail.com</a></div>
+                    <div class="FootherText"><div class="FootherTextPrev">Telegram:</div> <a href="https://t.me/etojemaximus">@etojemaxim</a></div>
+                </div>
+
+            </div>
+            <div style=" margin-top: 100px;"></div>
+        </div>
+        <div class="Copr">Copyright 2023-2024</div>
+        <script type="module" src="JS/Animation.js"></script>
+        <script>
+            function scrollToSectionContacts() {
+              const section = document.getElementById('Contacts');
+              section.scrollIntoView({ behavior: 'smooth' }); // Прокручиваем к элементу
+            }
+
+            function scrollToSectionMyWorks() {
+              const section = document.getElementById('MyWorks');
+              section.scrollIntoView({ behavior: 'smooth' }); // Прокручиваем к элементу
+            }
+          </script>
+</body>
+</html>
